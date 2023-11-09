@@ -11,19 +11,46 @@ for (let i = 0; i < 5; i++) {
     document.getElementById('numbers').innerHTML = numeri  
  }
 //gli do un timer
-setTimeout(eraser, 3000)
+setTimeout(eraser, 30000)
 //prompt per reinseririrli
-setTimeout(promptMaker,4000)
+setTimeout(function(){
+    promptMaker(numeri)
+},31000)
 //verifica numeri inseriti da utente
+
+
+
+
 
 function  eraser(){
     numbers = document.getElementById("numbers")
     numbers.classList.add("none")
 }
-function promptMaker(){
-    let inputUtente = []
-    let inputBrowser = prompt("inserisci i numeri che riesci a ricordarti separati da una virgola")
-    inputUtente = inputBrowser
-    let aInputUtente = Array.from(inputUtente)
-    console.log(aInputUtente)
+function promptMaker(numeri){
+    
+    numeriUtente = []
+    let inputnumero1 = parseInt(prompt("inserisci il primo numero"))
+    numeriUtente.push(inputnumero1)
+    let inputnumero2 = parseInt(prompt("inserisci il secondo numero"))
+    numeriUtente.push(inputnumero2)
+    let inputnumero3 = parseInt(prompt("inserisci il terzo numero"))
+    numeriUtente.push(inputnumero3)
+    let inputnumero4 =parseInt(prompt("inserisci il quarto numero"))
+    numeriUtente.push(inputnumero4)
+    let inputnumero5 = parseInt(prompt("inserisci il quinto numero"))
+    numeriUtente.push(inputnumero5)
+    let punteggioTotale = 0
+    for (i = 0; i < 5; i++){
+        if (numeri.includes(numeriUtente[i])){
+            alert("il numero è corretto")
+            punteggioTotale += 1
+        } else{
+            alert("il numero è sbagliato")
+        }
+        
+    }
+    alert("il tuo punteggio è " + punteggioTotale)
 }
+//     let aInputUtente = Array.from(inputUtente)
+//     let inputUtenteNumerico = []
+//     for (let i = 0;  )
