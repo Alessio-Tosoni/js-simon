@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+
+}
+body{
+    background: #222;
+    color: white;
+    font-family: sans-serif;
+}
+.contenitore{
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+h1{
+    font-size: 60px;
+}
+#numbers{
+    margin-top: 40px;
+    font-size: 40px;
+}
+.none{
+    display: none;
+}
