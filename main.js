@@ -12,11 +12,11 @@ for (let i = 0; i < 5; i++) {
  }
 //gli do un timer
 setTimeout(eraser, 30000)
-//prompt per reinseririrli
+//funzione prompt per reinseririrli e verifica di essi
 setTimeout(function(){
-    promptMaker(numeri)
+    let numeriUtente = promptMaker()
+    verifica(numeri)
 },31000)
-//verifica numeri inseriti da utente
 
 
 
@@ -26,7 +26,7 @@ function  eraser(){
     numbers = document.getElementById("numbers")
     numbers.classList.add("none")
 }
-function promptMaker(numeri){
+function promptMaker(){
     
     numeriUtente = []
     let inputnumero1 = parseInt(prompt("inserisci il primo numero"))
@@ -39,6 +39,10 @@ function promptMaker(numeri){
     numeriUtente.push(inputnumero4)
     let inputnumero5 = parseInt(prompt("inserisci il quinto numero"))
     numeriUtente.push(inputnumero5)
+    return numeriUtente
+}
+function verifica(numeri){
+
     let punteggioTotale = 0
     for (i = 0; i < 5; i++){
         if (numeri.includes(numeriUtente[i])){
@@ -46,11 +50,7 @@ function promptMaker(numeri){
             punteggioTotale += 1
         } else{
             alert("il numero è sbagliato")
-        }
-        
+        }  
     }
     alert("il tuo punteggio è " + punteggioTotale)
 }
-//     let aInputUtente = Array.from(inputUtente)
-//     let inputUtenteNumerico = []
-//     for (let i = 0;  )
